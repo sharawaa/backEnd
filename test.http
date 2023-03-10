@@ -1,11 +1,57 @@
-get http://localhost:4000/product HTTP/1.1
+get http://localhost:4000/products HTTP/1.1
 
 ###
 
+POST http://localhost:4000/users HTTP/1.1
+Content-Type:  application/json
+
+{
+"user" : [
+    {
+    "name": "zaya",
+    "role": "user",
+    "password": "123",
+    "eMail":"zaya@gmail.com",
+    "contact":"99113423",
+    "adress_1":"ub",
+    "user_image":"zurag",
+    "register_date":"2015-05-11"
+},
+{
+    "name": "tushig",
+    "role": "user",
+    "password": "123",
+    "eMail":"tushig@gmail.com",
+    "contact":"99111234",
+    "adress_1":"ub",
+    "user_image":"zurag2",
+    "register_date":"2020-06-11"
+}
+]
+}
+
+###
 POST http://localhost:4000/products HTTP/1.1
 Content-Type:  application/json
 
 {
-    "data": "this is text",
-    "id": "8"
+    "product":[
+        {
+    "image": "https://i02.appmifile.com",
+    "name": "Xiaomi Mi Book Air 14",
+    "stock": 5,
+    "price": 1200,
+    "sale": 10,
+    "date": "2000-05-11"
+  },
+  {
+    "description": "Apple 20W USB-C Power Adapter - iPhone",
+    "name": "Charger",
+    "image": "https://m.media-amazon.com",
+    "price": 1342,
+    "stock": 122,
+    "sale": 23,
+     "date": "2000-05-11"
+  } 
+]
 }
